@@ -101,6 +101,11 @@ Protections:
     RWX:      Has RWX segments
 ```
 
+Binary details:
+```
+bofit: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=599c2754819e660a71375162cc1cefb212ab8f16, for GNU/Linux 3.2.0, not stripped
+```
+
 We can spot in `play_game` function when we get `Shout it` we can write with gets to input buffer. So we have a classic buffer overflow. Let's exploit it then.
 
 ```
